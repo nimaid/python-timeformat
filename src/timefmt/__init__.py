@@ -1,6 +1,6 @@
 """Provides methods to manipulate and format various time-based objects into human-readable strings."""
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 from onecondition import ValidationError
 
