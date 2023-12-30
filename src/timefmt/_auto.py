@@ -2,7 +2,7 @@
 
 import datetime
 
-from timeformat import dt, td
+from timefmt import dt, td
 
 
 def auto(

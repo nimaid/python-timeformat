@@ -1,7 +1,7 @@
 """Contains methods to format datetime.timedelta objects into human-readable strings."""
 import datetime
 
-from timeformat._helpers import split_seconds
+from timefmt._helpers import split_seconds
 
 
 def short(timedelta_in: datetime.timedelta) -> str:

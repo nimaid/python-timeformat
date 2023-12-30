@@ -1,7 +1,7 @@
 """Contains methods to format datetime.datetime objects into human-readable strings."""
 import datetime
 
-from timeformat._helpers import day_of_month_string, timezone_name
+from timefmt._helpers import day_of_month_string, timezone_name
 
 
 def short(datetime_in: datetime.datetime) -> str:

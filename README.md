@@ -1,29 +1,31 @@
 # Time Formatting Tools
 ### Provides methods to manipulate and format various time-based objects into human-readable strings in Python.
 
-<p align="center"><a href="https://pypi.org/project/timeformat/"><img src="https://pypi.org/static/images/logo-large.9f732b5f.svg" width="200px" alt="timeformat on Pypi"></a></p>
+<p align="center"><a href="https://pypi.org/project/timefmt/"><img src="https://pypi.org/static/images/logo-large.9f732b5f.svg" width="200px" alt="timeformat on Pypi"></a></p>
 
 ## Usage
+
 ```python
 import datetime
-import timeformat
+import timefmt
 
 now = datetime.datetime.now()
 
-print("Now (short):", timeformat.dt.short(now))
-print("Now (long):", timeformat.dt.long(now))
+print("Now (short):", timefmt.dt.short(now))
+print("Now (long):", timefmt.dt.long(now))
 
 since_epoch = datetime.timedelta(seconds=now.timestamp())
 
-print("Time since Jan. 1st, 1970 (short):", timeformat.td.short(since_epoch))
-print("Time since Jan. 1st, 1970 (long):", timeformat.td.long(since_epoch))
+print("Time since Jan. 1st, 1970 (short):", timefmt.td.short(since_epoch))
+print("Time since Jan. 1st, 1970 (long):", timefmt.td.long(since_epoch))
 
 # You can also automatically detect which type it is, like so
 import random
+
 random_choice = random.choice([now, since_epoch])
 
-print("Unknown time format value (short):", timeformat.auto(random_choice))
-print("Unknown time format value (long):", timeformat.auto(random_choice, long=True))
+print("Unknown time format value (short):", timefmt.auto(random_choice))
+print("Unknown time format value (long):", timefmt.auto(random_choice, long=True))
 ```
 This prints the following:
 ```

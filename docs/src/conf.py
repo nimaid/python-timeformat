@@ -16,13 +16,13 @@ sys.path.insert(
     src_path
 )
 
-project = 'Time Formatting Tools (timeformat)'
+project = 'Time Formatting Tools (timefmt)'
 copyright = '2023, Ella Jameson'
 author = 'Ella Jameson'
 
 version = None
 version_prefix = "__version__ = "
-with open(os.path.join(src_path, "timeformat", "__init__.py")) as f:
+with open(os.path.join(src_path, "timefmt", "__init__.py")) as f:
     for line in f.readlines():
         line = line.strip("\n").strip("\r").strip()
 
