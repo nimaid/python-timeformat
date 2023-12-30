@@ -1,6 +1,6 @@
 @echo off
 
-set ENVNAME={[module_name]}
+set ENVNAME=timeformat
 set BUILDENVNAME=build
 
 set ORIGDIR=%CD%

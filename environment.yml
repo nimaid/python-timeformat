@@ -1,0 +1,9 @@
+name: python-timeformat
+channels:
+  - defaults
+dependencies:
+  - python=3.10*
+  - pip
+  - pip:
+    - pylint
+    - onecondition >= 0.1.2

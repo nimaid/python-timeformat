@@ -1,4 +1,4 @@
-{[simple_name]} Documentation
+Time Formatting Tools Documentation
 ===================================
 
 .. toctree::
