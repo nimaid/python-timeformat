@@ -19,5 +19,5 @@ dependencies = [
 [project.urls]
 homepage = "https://github.com/nimaid/python-timeformat"
 repository = "https://github.com/nimaid/python-timeformat"
-documentation = "https://timeformat.readthedocs.io/en/latest/index.html"
+documentation = "https://timefmt.readthedocs.io/en/latest/index.html"
 issues = "https://github.com/nimaid/python-timeformat/issues"

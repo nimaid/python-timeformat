@@ -38,4 +38,4 @@ Unknown time format value (long): 11:12:12 AM US Mountain Standard Time
 ```
 
 # Full Documentation
-<p align="center"><a href="https://timeformat.readthedocs.io/en/latest/index.html"><img src="https://brand-guidelines.readthedocs.org/_images/logo-wordmark-vertical-dark.png" width="300px" alt="timeformat on Read the Docs"></a></p>
+<p align="center"><a href="https://timefmt.readthedocs.io/en/latest/index.html"><img src="https://brand-guidelines.readthedocs.org/_images/logo-wordmark-vertical-dark.png" width="300px" alt="timefmt on Read the Docs"></a></p>
