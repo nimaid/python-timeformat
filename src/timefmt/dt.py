@@ -56,7 +56,7 @@ def long(datetime_in: datetime.datetime) -> str:
         >>> long(test_datetime2)
         '12:53:10 PM MST'
         >>> long(test_datetime2 + datetime.timedelta(days=1))
-        '2024/01/01 @ 12:53:10 PM MST'
+        'Monday, January 1st, 2024 at 12:53:10 PM MST'
     """
     now = datetime.datetime.now()
 
