@@ -3,6 +3,7 @@ import datetime
 from dataclasses import dataclass
 
 import onecondition as oc
+import onecondition.validate
 
 
 @dataclass
