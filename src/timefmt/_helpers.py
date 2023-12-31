@@ -9,7 +9,7 @@
     '23rd'
     >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
     >>> timezone_name(test_datetime)
-    'US Mountain Standard Time'
+    'MST'
 """
 import datetime
 from dataclasses import dataclass
@@ -138,13 +138,13 @@ def timezone_name(datetime_in: datetime.datetime) -> str:
 
     :param datetime.datetime datetime_in: The datetime.datetime object to get the timezone for.
 
-    :return: A human-readable string with the full timezone name spelled out.
+    :return: A human-readable string with the timezone name (OS-specific formatting).
     :rtype: str
 
     :Example:
         >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
         >>> timezone_name(test_datetime)
-        'US Mountain Standard Time'
+        'MST'
     """
     timezone = datetime_in.astimezone()
 

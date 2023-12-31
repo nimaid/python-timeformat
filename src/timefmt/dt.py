@@ -5,7 +5,7 @@
     >>> short(test_datetime)
     '12:23:31 PM'
     >>> long(test_datetime)
-    '12:23:31 PM US Mountain Standard Time'
+    '12:23:31 PM MST'
 """
 import datetime
 
@@ -49,10 +49,10 @@ def long(datetime_in: datetime.datetime) -> str:
     :Example:
         >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
         >>> long(test_datetime)
-        '12:23:31 PM US Mountain Standard Time'
+        '12:23:31 PM MST'
         >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258)
         >>> long(test_datetime2)
-        '12:53:10 PM US Mountain Standard Time'
+        '12:53:10 PM MST'
     """
     now = datetime.datetime.now()
 

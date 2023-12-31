@@ -2,11 +2,11 @@
 
 :Example:
     >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'MST'))
     >>> auto(test_datetime)
     '12:23:31 PM'
     >>> auto(test_datetime, long=True)
-    '12:23:31 PM US Mountain Standard Time'
+    '12:23:31 PM MST'
 """
 
 import datetime
@@ -33,7 +33,7 @@ def auto(
         >>> auto(test_datetime)
         '12:23:31 PM'
         >>> auto(test_datetime, long=True)
-        '12:23:31 PM US Mountain Standard Time'
+        '12:23:31 PM MST'
 
         >>> test_timedelta = datetime.timedelta(hours=1000, seconds=9999)
         >>> auto(test_timedelta)

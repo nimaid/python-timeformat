@@ -49,11 +49,11 @@ print("Unknown time format value (long):", timefmt.auto(random_choice, long=True
 This prints the following:
 ```
 Now (short): 11:12:12 AM
-Now (long): 11:12:12 AM US Mountain Standard Time
+Now (long): 11:12:12 AM MST
 Time since Jan. 1st, 1970 (short): 2817W 2D 18:12:12
 Time since Jan. 1st, 1970 (long): 2817 weeks, 2 days, 18 hours, 12 minutes, and 12 seconds
 Unknown time format value (short): 11:12:12 AM
-Unknown time format value (long): 11:12:12 AM US Mountain Standard Time
+Unknown time format value (long): 11:12:12 AM MST
 ```
 
 # Full Documentation
