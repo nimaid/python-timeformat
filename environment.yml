@@ -2,8 +2,11 @@ name: python-timefmt
 channels:
   - defaults
 dependencies:
-  - python=3.10*
+  - python>=3.10
   - pip
   - pip:
     - pylint
-    - onecondition >= 0.3.0
+    - onecondition >= 1.0.0
+    - pytest
+    - pytest-codeblocks
+    - coverage

@@ -1,8 +1,6 @@
 # Time Formatting Tools
 ### Provides methods to manipulate and format various time-based objects into human-readable strings in Python.
 
-<p align="center"><a href="https://pypi.org/project/timefmt/"><img src="https://pypi.org/static/images/logo-large.9f732b5f.svg" width="200px" alt="timeformat on Pypi"></a></p>
-
 ## Usage
 
 ```python

@@ -1,2 +1,1 @@
-include src/timeformat/*.yml src/timeformat/*.py
-graft src/timeformat/resources
+include src/timeformat/*.py
