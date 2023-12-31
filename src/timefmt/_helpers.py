@@ -7,8 +7,7 @@
     'rd'
     >>> day_of_month_string(23)
     '23rd'
-    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
     >>> timezone_name(test_datetime)
     'US Mountain Standard Time'
 """
@@ -143,8 +142,7 @@ def timezone_name(datetime_in: datetime.datetime) -> str:
     :rtype: str
 
     :Example:
-        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
         >>> timezone_name(test_datetime)
         'US Mountain Standard Time'
     """

@@ -1,8 +1,7 @@
 """Contains methods to format datetime.datetime objects into human-readable strings.
 
 :Example:
-    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
     >>> short(test_datetime)
     '12:23:31 PM'
     >>> long(test_datetime)
@@ -22,12 +21,10 @@ def short(datetime_in: datetime.datetime) -> str:
     :rtype: str
 
     :Example:
-        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
         >>> short(test_datetime)
         '12:23:31 PM'
-        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258,
-        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258)
         >>> short(test_datetime2)
         '12:53:10 PM'
     """
@@ -50,12 +47,10 @@ def long(datetime_in: datetime.datetime) -> str:
     :rtype: str
 
     :Example:
-        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
         >>> long(test_datetime)
         '12:23:31 PM US Mountain Standard Time'
-        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258,
-        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258)
         >>> long(test_datetime2)
         '12:53:10 PM US Mountain Standard Time'
     """

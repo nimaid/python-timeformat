@@ -3,8 +3,7 @@
 :Example:
     >>> import timefmt
     >>> import datetime
-    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
     >>> test_timedelta = datetime.timedelta(hours=1000, seconds=9999)
 
     >>> timefmt.auto(test_datetime)

@@ -29,8 +29,7 @@ def auto(
     :rtype: str
 
     :Example:
-        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
-        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
         >>> auto(test_datetime)
         '12:23:31 PM'
         >>> auto(test_datetime, long=True)
