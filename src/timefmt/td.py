@@ -26,6 +26,8 @@ def short(timedelta_in: datetime.timedelta) -> str:
         '5W 6D 13:13:21 ago'
         >>> short(datetime.timedelta(seconds=90))
         '0:01:30'
+        >>> short(datetime.timedelta(seconds=30))
+        '0:00:30'
     """
     ago_string = ""
     if timedelta_in < datetime.timedelta(0):
@@ -63,6 +65,8 @@ def long(timedelta_in: datetime.timedelta) -> str:
         '5 weeks, 6 days, 13 hours, 13 minutes, and 21 seconds ago'
         >>> long(datetime.timedelta(seconds=90))
         '1 minute and 30 seconds'
+        >>> long(datetime.timedelta(seconds=30))
+        '30 seconds'
     """
     ago_string = ""
     if timedelta_in < datetime.timedelta(0):
