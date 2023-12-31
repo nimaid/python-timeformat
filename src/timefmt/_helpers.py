@@ -1,4 +1,17 @@
-"""Helper functions to aid with formatting time-based objects into human-readable text."""
+"""Helper functions to aid with formatting time-based objects into human-readable text.
+
+:Example:
+    >>> split_seconds(123456789)
+    SplitTime(weeks=204, days=0, hours=21, minutes=33, seconds=9, milliseconds=0)
+    >>> day_of_month_suffix(23)
+    'rd'
+    >>> day_of_month_string(23)
+    '23rd'
+    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
+    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+    >>> timezone_name(test_datetime)
+    'US Mountain Standard Time'
+"""
 import datetime
 from dataclasses import dataclass
 
@@ -26,6 +39,16 @@ def split_seconds(seconds_in: int | float) -> SplitTime:
 
     :return: A SplitTime object with the split weeks, days, hours, minutes, seconds, and milliseconds.
     :rtype: SplitTime
+
+    :Example:
+        >>> split_seconds(1.234)
+        SplitTime(weeks=0, days=0, hours=0, minutes=0, seconds=1, milliseconds=234.0)
+        >>> split_seconds(123456789)
+        SplitTime(weeks=204, days=0, hours=21, minutes=33, seconds=9, milliseconds=0)
+        >>> split_seconds(-3)
+        Traceback (most recent call last):
+            ...
+        onecondition.ValidationError: Value `-3` must not be negative (non-zero)
     """
     oc.validate.not_negative(seconds_in)
 
@@ -55,6 +78,18 @@ def day_of_month_suffix(day: int) -> str:
 
     :return: A string that is either 'st', 'nd', 'rd', or 'th'.
     :rtype: str
+
+    :Example:
+        >>> day_of_month_suffix(1)
+        'st'
+        >>> day_of_month_suffix(23)
+        'rd'
+        >>> day_of_month_suffix(11)
+        'th'
+        >>> day_of_month_suffix(22)
+        'nd'
+        >>> day_of_month_suffix(26)
+        'th'
     """
     oc.validate.positive(day)
 
@@ -81,6 +116,18 @@ def day_of_month_string(day: int) -> str:
 
     :return: A string with the day of the month and an appropriate suffix ('st', 'nd', 'rd', or 'th').
     :rtype: str
+
+    :Example:
+        >>> day_of_month_string(1)
+        '1st'
+        >>> day_of_month_string(23)
+        '23rd'
+        >>> day_of_month_string(11)
+        '11th'
+        >>> day_of_month_string(22)
+        '22nd'
+        >>> day_of_month_string(26)
+        '26th'
     """
     oc.validate.positive(day)
 
@@ -94,6 +141,12 @@ def timezone_name(datetime_in: datetime.datetime) -> str:
 
     :return: A human-readable string with the full timezone name spelled out.
     :rtype: str
+
+    :Example:
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
+        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> timezone_name(test_datetime)
+        'US Mountain Standard Time'
     """
     timezone = datetime_in.astimezone()
 
