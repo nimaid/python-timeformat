@@ -12,7 +12,13 @@
     '5 weeks, 6 days, 18 hours, 46 minutes, and 39 seconds'
 """
 
-__version__ = "1.1.2"
+__version__ = "1.1.3"
+
+__all__ = [
+    "dt", "td",
+    "SplitTime", "split_seconds", "day_of_month_suffix", "day_of_month_string", "timezone_name",
+    "auto",
+]
 
 from timefmt._helpers import SplitTime, split_seconds, day_of_month_suffix, day_of_month_string, timezone_name
 from timefmt._auto import auto
