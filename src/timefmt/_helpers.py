@@ -2,7 +2,7 @@
 import datetime
 from dataclasses import dataclass
 
-from onecondition import Validate
+import onecondition as oc
 
 
 @dataclass
@@ -26,7 +26,7 @@ def split_seconds(seconds_in: int | float) -> SplitTime:
     :return: A SplitTime object with the split weeks, days, hours, minutes, seconds, and milliseconds.
     :rtype: SplitTime
     """
-    Validate.not_negative(seconds_in)
+    oc.validate.not_negative(seconds_in)
 
     weeks, remainder = divmod(seconds_in, (60 ** 2) * 24 * 7)
     days, remainder = divmod(remainder, (60 ** 2) * 24)
@@ -55,7 +55,7 @@ def day_of_month_suffix(day: int) -> str:
     :return: A string that is either 'st', 'nd', 'rd', or 'th'.
     :rtype: str
     """
-    Validate.positive(day)
+    oc.validate.positive(day)
 
     if day % 100 in [11, 12, 13]:
         return "th"
@@ -81,7 +81,7 @@ def day_of_month_string(day: int) -> str:
     :return: A string with the day of the month and an appropriate suffix ('st', 'nd', 'rd', or 'th').
     :rtype: str
     """
-    Validate.positive(day)
+    oc.validate.positive(day)
 
     return f"{day}{day_of_month_suffix(day)}"
 

@@ -6,4 +6,4 @@ dependencies:
   - pip
   - pip:
     - pylint
-    - onecondition >= 0.1.2
+    - onecondition >= 0.3.0
