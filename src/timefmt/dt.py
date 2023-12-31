@@ -1,4 +1,13 @@
-"""Contains methods to format datetime.datetime objects into human-readable strings."""
+"""Contains methods to format datetime.datetime objects into human-readable strings.
+
+:Example:
+    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
+    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+    >>> short(test_datetime)
+    '12:23:31 PM'
+    >>> long(test_datetime)
+    '12:23:31 PM US Mountain Standard Time'
+"""
 import datetime
 
 from timefmt._helpers import day_of_month_string, timezone_name
@@ -11,6 +20,16 @@ def short(datetime_in: datetime.datetime) -> str:
 
     :return: The datetime.datetime object as a short human-readable string
     :rtype: str
+
+    :Example:
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
+        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> short(test_datetime)
+        '12:23:31 PM'
+        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258,
+        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> short(test_datetime2)
+        '12:53:10 PM'
     """
     now = datetime.datetime.now()
 
@@ -29,6 +48,16 @@ def long(datetime_in: datetime.datetime) -> str:
 
     :return: The datetime.datetime object as a long human-readable string
     :rtype: str
+
+    :Example:
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
+        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> long(test_datetime)
+        '12:23:31 PM US Mountain Standard Time'
+        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258,
+        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> long(test_datetime2)
+        '12:53:10 PM US Mountain Standard Time'
     """
     now = datetime.datetime.now()
 

@@ -1,4 +1,13 @@
-"""Provides a method to automatically convert a datetime or timedelta object to a human-readable string."""
+"""Provides a method to automatically convert a datetime or timedelta object to a human-readable string.
+
+:Example:
+    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
+    ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+    >>> auto(test_datetime)
+    '12:23:31 PM'
+    >>> auto(test_datetime, long=True)
+    '12:23:31 PM US Mountain Standard Time'
+"""
 
 import datetime
 
@@ -18,6 +27,20 @@ def auto(
 
     :return: The input time in a human-readable format.
     :rtype: str
+
+    :Example:
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292,
+        ...     tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=61200), 'US Mountain Standard Time'))
+        >>> auto(test_datetime)
+        '12:23:31 PM'
+        >>> auto(test_datetime, long=True)
+        '12:23:31 PM US Mountain Standard Time'
+
+        >>> test_timedelta = datetime.timedelta(hours=1000, seconds=9999)
+        >>> auto(test_timedelta)
+        '5W 6D 18:46:39'
+        >>> auto(test_timedelta, long=True)
+        '5 weeks, 6 days, 18 hours, 46 minutes, and 39 seconds'
     """
     if isinstance(time_in, datetime.datetime):
         if long:

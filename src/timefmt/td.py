@@ -1,4 +1,11 @@
-"""Contains methods to format datetime.timedelta objects into human-readable strings."""
+"""Contains methods to format datetime.timedelta objects into human-readable strings.
+
+:Example:
+    >>> short(datetime.timedelta(hours=1000, seconds=9999))
+    '5W 6D 18:46:39'
+    >>> long(datetime.timedelta(hours=1000, seconds=9999))
+    '5 weeks, 6 days, 18 hours, 46 minutes, and 39 seconds'
+"""
 import datetime
 
 from timefmt._helpers import split_seconds
@@ -11,6 +18,14 @@ def short(timedelta_in: datetime.timedelta) -> str:
 
     :return: The datetime.timedelta object as a short human-readable string
     :rtype: str
+
+    :Example:
+        >>> short(datetime.timedelta(hours=1000, seconds=9999))
+        '5W 6D 18:46:39'
+        >>> short(datetime.timedelta(hours=-1000, seconds=9999))
+        '5W 6D 13:13:21 ago'
+        >>> short(datetime.timedelta(seconds=90))
+        '0:01:30'
     """
     ago_string = ""
     if timedelta_in < datetime.timedelta(0):
@@ -40,6 +55,14 @@ def long(timedelta_in: datetime.timedelta) -> str:
 
     :return: The datetime.timedelta object as a long human-readable string
     :rtype: str
+
+    :Example:
+        >>> long(datetime.timedelta(hours=1000, seconds=9999))
+        '5 weeks, 6 days, 18 hours, 46 minutes, and 39 seconds'
+        >>> long(datetime.timedelta(hours=-1000, seconds=9999))
+        '5 weeks, 6 days, 13 hours, 13 minutes, and 21 seconds ago'
+        >>> long(datetime.timedelta(seconds=90))
+        '1 minute and 30 seconds'
     """
     ago_string = ""
     if timedelta_in < datetime.timedelta(0):

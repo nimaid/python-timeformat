@@ -1,5 +1,5 @@
 # Time Formatting Tools
-### Provides methods to manipulate and format various time-based objects into human-readable strings in Python.
+### Provides methods to manipulate and format various time-based objects into human-readable strings.
 [![Python Version](https://img.shields.io/pypi/pyversions/timefmt?logo=python&logoColor=white)](https://pypi.org/project/timefmt/)
 [![PyPI Version](https://img.shields.io/pypi/v/timefmt?logo=PyPI&logoColor=white)](https://pypi.org/project/timefmt/)
 
@@ -11,13 +11,22 @@
 [![License](https://img.shields.io/pypi/l/timefmt?logo=opensourceinitiative&logoColor=white)](https://github.com/nimaid/python-timeformat/raw/main/LICENSE)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/timefmt.svg?label=pypi%20downloads&logo=PyPI&logoColor=white)](https://pypi.org/project/timefmt/)
 
+## Why?
+The `datetime` standard package in Python is very useful for working with times programmatically, but it only provides basic text formatting.
+Additionally, other packages which add time formatting methods like `pendulum` use non-standard datetime-like objects, and they have a lot of extra features I didn't need.
 
+While it's not too hard to define some helper functions to format time into human-readable text, it becomes annoying when you have to copy the functions into every project you make with time formatting.
+
+`timefmt` solves this by providing lightweight helper functions written entirely in Python that handle formatting and manipulating time-based objects.
+The code is pre-tested and easy to install with `pip`, meaning you can get up and going with nicely formatted time strings without any hassle.
 
 ## Usage
 
 ```python
 import datetime
-import timefmt
+import timefmt  # Gives access to the auto() method (recommended)
+import timefmt.dt  # Gives access to datetime specific methods
+import timefmt.td  # Gives access to timedelta specific methods
 
 now = datetime.datetime.now()
 
