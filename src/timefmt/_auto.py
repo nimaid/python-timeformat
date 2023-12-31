@@ -40,6 +40,10 @@ def auto(
         '5W 6D 18:46:39'
         >>> auto(test_timedelta, long=True)
         '5 weeks, 6 days, 18 hours, 46 minutes, and 39 seconds'
+        >>> auto(42)
+        Traceback (most recent call last):
+            ...
+        TypeError: Time in must be either a datetime or timedelta object, not a <class 'int'>
     """
     if isinstance(time_in, datetime.datetime):
         if long:
