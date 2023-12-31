@@ -27,6 +27,8 @@ def short(datetime_in: datetime.datetime) -> str:
         >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258)
         >>> short(test_datetime2)
         '12:53:10 PM'
+        >>> short(test_datetime2 + datetime.timedelta(days=1))
+        '2024/01/01 @ 12:53:10 PM'
     """
     now = datetime.datetime.now()
 
@@ -53,6 +55,8 @@ def long(datetime_in: datetime.datetime) -> str:
         >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258)
         >>> long(test_datetime2)
         '12:53:10 PM MST'
+        >>> long(test_datetime2 + datetime.timedelta(days=1))
+        '2024/01/01 @ 12:53:10 PM MST'
     """
     now = datetime.datetime.now()
 
