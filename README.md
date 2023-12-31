@@ -1,5 +1,17 @@
 # Time Formatting Tools
 ### Provides methods to manipulate and format various time-based objects into human-readable strings in Python.
+[![Python Version](https://img.shields.io/pypi/pyversions/timefmt?logo=python&logoColor=white)](https://pypi.org/project/timefmt/)
+[![PyPI Version](https://img.shields.io/pypi/v/timefmt?logo=PyPI&logoColor=white)](https://pypi.org/project/timefmt/)
+
+[![GitHub Build](https://img.shields.io/github/actions/workflow/status/nimaid/python-timeformat/master.yml?logo=GitHub)](https://github.com/nimaid/python-timeformat/actions/workflows/master.yml)
+[![Coveralls Coverage](https://img.shields.io/coverallsCoverage/github/nimaid/python-timeformat?logo=coveralls)](https://coveralls.io/github/nimaid/python-timeformat)
+[![Codecov Coverage](https://codecov.io/gh/nimaid/python-timeformat/graph/badge.svg?token=IG0GJD2GIO)](https://codecov.io/gh/nimaid/python-timeformat)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1315b052266245688caf4c9869bb2ad9)](https://app.codacy.com/gh/nimaid/python-timeformat/dashboard)
+
+[![License](https://img.shields.io/pypi/l/timefmt?logo=opensourceinitiative&logoColor=white)](https://github.com/nimaid/python-timeformat/raw/main/LICENSE)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/timefmt.svg?label=pypi%20downloads&logo=PyPI&logoColor=white)](https://pypi.org/project/timefmt/)
+
+
 
 ## Usage
 
