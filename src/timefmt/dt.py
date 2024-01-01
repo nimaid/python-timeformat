@@ -50,11 +50,11 @@ def long(datetime_in: datetime.datetime) -> str:
         >>> freezer = freeze_time("2023-12-31")
         >>> r = freezer.start()
 
-        >>> import pytz
-        >>> test_datetime = pytz.timezone("MST").localize(datetime.datetime(2023, 12, 31, 12, 23, 31, 379292), is_dst=None)
+        >>> from zoneinfo import ZoneInfo
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292, tzinfo=ZoneInfo("MST"))
         >>> long(test_datetime)
         '12:23:31 PM MST'
-        >>> test_datetime2 = pytz.timezone("EST").localize(datetime.datetime(2023, 12, 31, 12, 53, 10, 467258), is_dst=None)
+        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258, tzinfo=ZoneInfo("EST"))
         >>> long(test_datetime2)
         '12:53:10 PM EST'
         >>> long(test_datetime2 + datetime.timedelta(days=1))
