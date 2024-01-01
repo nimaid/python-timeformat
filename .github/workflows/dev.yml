@@ -24,4 +24,4 @@ jobs:
       - name: Install Local Package
         run: python3 -m pip install -e .
       - name: Run Coverage and Unit Tests
-        run: coverage --exclude-pattern "usr/" run -m pytest
+        run: coverage run -m pytest && coverage report --omit=usr/
