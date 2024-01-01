@@ -24,9 +24,7 @@ The code is pre-tested and easy to install with `pip`, meaning you can get up an
 
 ```python
 import datetime
-import timefmt  # Gives access to the auto() method (recommended)
-import timefmt.dt  # Gives access to datetime specific methods
-import timefmt.td  # Gives access to timedelta specific methods
+import timefmt
 
 now = datetime.datetime.now()
 
@@ -38,7 +36,7 @@ since_epoch = datetime.timedelta(seconds=now.timestamp())
 print("Time since Jan. 1st, 1970 (short):", timefmt.td.short(since_epoch))
 print("Time since Jan. 1st, 1970 (long):", timefmt.td.long(since_epoch))
 
-# You can also automatically detect which type it is, like so
+# You can also automatically detect which type it is, like so (recommended)
 import random
 
 random_choice = random.choice([now, since_epoch])
