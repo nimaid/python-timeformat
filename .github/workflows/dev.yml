@@ -20,7 +20,7 @@ jobs:
         with:
           timezoneLinux: "US/Arizona"
       - name: Install Python Tools
-        run: python3 -m pip install coverage pytest pytest-codeblocks
+        run: python3 -m pip install coverage pytest pytest-codeblocks freezegun
       - name: Install Local Package
         run: python3 -m pip install -e .
       - name: Run Coverage and Unit Tests
