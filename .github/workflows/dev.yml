@@ -23,5 +23,5 @@ jobs:
         run: python3 -m pip install coverage pytest pytest-codeblocks freezegun
       - name: Install Local Package
         run: python3 -m pip install -e .
-      - name: Run Coverage and Unit Tests
-        run: coverage run -m pytest && coverage report --omit=usr/*
+      - name: Run Unit Tests
+        run: pytest
