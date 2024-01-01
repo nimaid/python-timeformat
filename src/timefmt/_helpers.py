@@ -1,16 +1,4 @@
-"""Helper functions to aid with formatting time-based objects into human-readable text.
-
-:Example:
-    >>> split_seconds(123456789)
-    SplitTime(weeks=204, days=0, hours=21, minutes=33, seconds=9, milliseconds=0)
-    >>> day_of_month_suffix(23)
-    'rd'
-    >>> day_of_month_string(23)
-    '23rd'
-    >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
-    >>> timezone_name(test_datetime)
-    'MST'
-"""
+"""Helper functions to aid with formatting time-based objects into human-readable text."""
 import datetime
 from dataclasses import dataclass
 
@@ -138,14 +126,18 @@ def timezone_name(datetime_in: datetime.datetime) -> str:
 
     :param datetime.datetime datetime_in: The datetime.datetime object to get the timezone for.
 
-    :return: A human-readable string with the timezone name (OS-specific formatting).
+    :return: A human-readable string with the timezone name (defaults to OS-specific formatting).
     :rtype: str
 
     :Example:
-        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292)
+        >>> from zoneinfo import ZoneInfo
+        >>> test_datetime = datetime.datetime(2023, 12, 31, 12, 23, 31, 379292, tzinfo=ZoneInfo("MST"))
         >>> timezone_name(test_datetime)
         'MST'
+        >>> test_datetime2 = datetime.datetime(2023, 12, 31, 12, 53, 10, 467258, tzinfo=ZoneInfo("EST"))
+        >>> timezone_name(test_datetime2)
+        'EST'
     """
-    timezone = datetime_in.astimezone()
+    direct_tzname = datetime_in.tzname()
 
-    return timezone.tzinfo.tzname(timezone)
+    return direct_tzname if direct_tzname else datetime_in.astimezone().tzname()

@@ -1,11 +1,4 @@
-"""Contains methods to format datetime.timedelta objects into human-readable strings.
-
-:Example:
-    >>> short(datetime.timedelta(hours=1000, seconds=9999))
-    '5W 6D 18:46:39'
-    >>> long(datetime.timedelta(hours=1000, seconds=9999))
-    '5 weeks, 6 days, 18 hours, 46 minutes, and 39 seconds'
-"""
+"""Contains methods to format datetime.timedelta objects into human-readable strings."""
 import datetime
 
 from timefmt._helpers import split_seconds
