@@ -12,7 +12,7 @@
     '5 weeks, 6 days, 18 hours, 46 minutes, and 39 seconds'
 """
 
-__version__ = "1.1.4"
+__version__ = "1.1.5"
 
 __all__ = [
     "dt", "td",
