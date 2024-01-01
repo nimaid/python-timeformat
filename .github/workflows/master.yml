@@ -31,8 +31,8 @@ jobs:
       - name: Install Local Package
         run: python3 -m pip install -e .
       - name: Run Coverage and Unit Tests
-        run: coverage run -m pytest
-      - name: Upload coverage reports to Codecov
+        run: coverage run -m pytest && coverage report --omit=usr/
+      - name: Upload coverage  reports to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
