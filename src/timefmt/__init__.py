@@ -1,6 +1,6 @@
 """Provides methods to manipulate and format various time-based objects into human-readable strings."""
 
-__version__ = "1.1.10"
+__version__ = "1.1.11"
 
 __all__ = [
     "dt", "td",
